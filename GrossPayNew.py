@@ -1,8 +1,17 @@
 hours = input("Enter Hours:")
+try:
+    hours = float(hours)
+except ValueError:
+    print("Please enter a numeric value for Hour!")
+    quit()
+
 
 rate =input("Enter Rate:")
-hours = float(hours)
-rate = float(rate)
+try:
+    rate = float(rate)
+except ValueError:
+    print("Please enter a numeric value for Rate!")
+    quit()
 
 if hours > 40:
     overtime = hours - 40
